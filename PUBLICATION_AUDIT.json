@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "files_scanned": 56,
+  "findings": [],
+  "checks": [
+    "private_key",
+    "ssh_public_key",
+    "github_token",
+    "api_token",
+    "cloud_access_key",
+    "credential_assignment",
+    "personal_unix_path",
+    "personal_windows_path",
+    "machine_name",
+    "excluded_file",
+    "private_ip",
+    "symlink"
+  ],
+  "limitation": "Pattern scans are supplemented by an explicit source allowlist and manual review; they cannot prove the absence of every possible secret."
+}

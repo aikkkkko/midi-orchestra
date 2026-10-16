@@ -1,0 +1,29 @@
+# User configuration and generated runtime data
+config.local.json
+*.local.json
+.runtime/
+outputs/
+*.log
+.env
+.env.*
+!.env.example
+.ssh/
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+known_hosts
+# Python build/cache files
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+.pytest_cache/
+# OS metadata
+.DS_Store
+._*
+Thumbs.db
+*.local.json.*

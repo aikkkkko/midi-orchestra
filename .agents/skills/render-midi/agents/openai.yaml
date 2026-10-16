@@ -1,0 +1,4 @@
+interface:
+  display_name: "Render MIDI"
+  short_description: "Compose or render MIDI into instrument audio"
+  default_prompt: "Use $render-midi to write and render 30 seconds of calm piano and strings for my video."

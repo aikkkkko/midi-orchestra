@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "midi-orchestra"
+version = "0.1.0"
+description = "Reproducible MIDI rendering with Surge XT, FluidSynth and optional MIDI-DDSP"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+dependencies = []
+
+[project.optional-dependencies]
+render = ["numpy>=1.24", "pretty_midi>=0.2.10", "soundfile>=0.12"]
+surge = ["numpy>=1.24", "pretty_midi>=0.2.10", "soundfile>=0.12", "dawdreamer==0.9.0"]
+
+[project.scripts]
+midi-orchestra = "midi_orchestra.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+midi_orchestra = ["resources/*.json"]

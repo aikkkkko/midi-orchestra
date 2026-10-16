@@ -1,0 +1,196 @@
+{
+  "schema_version": 1,
+  "transport": {
+    "type": "ssh",
+    "ssh_alias": "render-host",
+    "work_root": "C:/midi-orchestra/jobs",
+    "runner": "C:/midi-orchestra/render_job.py"
+  },
+  "engines": {
+    "dawdreamer_surge": {
+      "enabled": true,
+      "python": "C:/midi-orchestra/.runtime/surge/python/python.exe",
+      "plugin_path": "C:/midi-orchestra/.runtime/surge/portable/Surge Synth Team/Surge XT.vst3",
+      "sample_rate": 48000
+    },
+    "fluidsynth_sf2": {
+      "enabled": false,
+      "python": "python",
+      "executable": "fluidsynth",
+      "soundfont_path": "C:/midi-orchestra/.runtime/soundfonts/piano.sf2",
+      "soundfont_name": "User-installed SF2",
+      "soundfont_license": "Set to the selected library license",
+      "soundfont_credit": "Set to the selected library authors",
+      "soundfont_source": "Set to the selected library source URL",
+      "sample_rate": 48000
+    },
+    "midi_ddsp": {
+      "enabled": false,
+      "python": "C:/midi-orchestra/.runtime/midi-ddsp/env/python.exe",
+      "environment_root": "C:/midi-orchestra/.runtime/midi-ddsp/env",
+      "sample_rate": 16000
+    }
+  },
+  "instruments": [
+    {
+      "id": "surge_pad",
+      "name": "柔和铺底",
+      "family": "synth",
+      "engine": "dawdreamer_surge",
+      "midi_program": 0,
+      "polyphonic_track": true,
+      "preset_path": "C:/midi-orchestra/.runtime/surge/presets/surge_pad.vstpreset",
+      "preset_sha256": "generated-by-setup",
+      "preset_source": "Pads/MKS-70 Warm Pad.fxp; factory credit: Claes",
+      "tail_seconds": 6
+    },
+    {
+      "id": "surge_bass",
+      "name": "合成低音",
+      "family": "synth",
+      "engine": "dawdreamer_surge",
+      "midi_program": 0,
+      "polyphonic_track": true,
+      "preset_path": "C:/midi-orchestra/.runtime/surge/presets/surge_bass.vstpreset",
+      "preset_sha256": "generated-by-setup",
+      "preset_source": "Basses/Mellow.fxp; factory credit: Claes",
+      "tail_seconds": 6
+    },
+    {
+      "id": "surge_pluck",
+      "name": "短音拨奏",
+      "family": "synth",
+      "engine": "dawdreamer_surge",
+      "midi_program": 0,
+      "polyphonic_track": true,
+      "preset_path": "C:/midi-orchestra/.runtime/surge/presets/surge_pluck.vstpreset",
+      "preset_sha256": "generated-by-setup",
+      "preset_source": "Plucks/Clean.fxp; factory credit: Claes",
+      "tail_seconds": 6
+    },
+    {
+      "id": "surge_texture",
+      "name": "转场纹理",
+      "family": "synth",
+      "engine": "dawdreamer_surge",
+      "midi_program": 0,
+      "polyphonic_track": true,
+      "preset_path": "C:/midi-orchestra/.runtime/surge/presets/surge_texture.vstpreset",
+      "preset_sha256": "generated-by-setup",
+      "preset_source": "FX/Space Adventure 1.fxp; factory credit: Claes",
+      "tail_seconds": 6
+    },
+    {
+      "id": "piano",
+      "name": "采样钢琴",
+      "family": "piano",
+      "engine": "fluidsynth_sf2",
+      "midi_program": 0,
+      "polyphonic_track": true
+    },
+    {
+      "id": "violin",
+      "name": "小提琴",
+      "family": "strings",
+      "engine": "midi_ddsp",
+      "midi_program": 40,
+      "polyphonic_track": false
+    },
+    {
+      "id": "viola",
+      "name": "中提琴",
+      "family": "strings",
+      "engine": "midi_ddsp",
+      "midi_program": 41,
+      "polyphonic_track": false
+    },
+    {
+      "id": "cello",
+      "name": "大提琴",
+      "family": "strings",
+      "engine": "midi_ddsp",
+      "midi_program": 42,
+      "polyphonic_track": false
+    },
+    {
+      "id": "double_bass",
+      "name": "低音提琴",
+      "family": "strings",
+      "engine": "midi_ddsp",
+      "midi_program": 43,
+      "polyphonic_track": false
+    },
+    {
+      "id": "flute",
+      "name": "长笛",
+      "family": "woodwind",
+      "engine": "midi_ddsp",
+      "midi_program": 73,
+      "polyphonic_track": false
+    },
+    {
+      "id": "oboe",
+      "name": "双簧管",
+      "family": "woodwind",
+      "engine": "midi_ddsp",
+      "midi_program": 68,
+      "polyphonic_track": false
+    },
+    {
+      "id": "clarinet",
+      "name": "单簧管",
+      "family": "woodwind",
+      "engine": "midi_ddsp",
+      "midi_program": 71,
+      "polyphonic_track": false
+    },
+    {
+      "id": "saxophone",
+      "name": "萨克斯",
+      "family": "woodwind",
+      "engine": "midi_ddsp",
+      "midi_program": 66,
+      "polyphonic_track": false
+    },
+    {
+      "id": "bassoon",
+      "name": "巴松",
+      "family": "woodwind",
+      "engine": "midi_ddsp",
+      "midi_program": 70,
+      "polyphonic_track": false
+    },
+    {
+      "id": "trumpet",
+      "name": "小号",
+      "family": "brass",
+      "engine": "midi_ddsp",
+      "midi_program": 56,
+      "polyphonic_track": false
+    },
+    {
+      "id": "horn",
+      "name": "圆号",
+      "family": "brass",
+      "engine": "midi_ddsp",
+      "midi_program": 60,
+      "polyphonic_track": false
+    },
+    {
+      "id": "trombone",
+      "name": "长号",
+      "family": "brass",
+      "engine": "midi_ddsp",
+      "midi_program": 57,
+      "polyphonic_track": false
+    },
+    {
+      "id": "tuba",
+      "name": "大号",
+      "family": "brass",
+      "engine": "midi_ddsp",
+      "midi_program": 58,
+      "polyphonic_track": false
+    }
+  ]
+}
